@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscaping company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <form name="myform" id="myform">
+    <h1 data-title="LA LA LAND Company" class="p-5">LA LA LAND Company</h1>
+    <div class="container p-3">
+      <div class="row">
+        <div class="col">
+          <label class="form-label">First name</label>
+          <input type="text" autofocus class="form-control" pattern="[A-Za-z -]{1,25}" id="firstName" placeholder="First name" required>
+        </div>
+        <div class="col">
+          <label class="form-label">Last name</label>
+          <input type="text" class="form-control" pattern="[A-Za-z -]{1,25}" id="lastName" placeholder="Last name" required>
+      </div>
+    </div>
+      <div class="row pt-3">
+        <div class="col">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control" id="address1" placeholder="1234 Main St" required>
+        </div>
+        <div class="col">
+          <label class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="address2" placeholder="Apartment, or floor" required>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col">
+            <label class="form-label">Postal Code</label>
+            <input type="text" class="form-control" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1}+- [0-9]{1}[A-Z]{1}[0-9]{1}" id="code"
+              placeholder="XXX-XXX" required>
+          </div>
+        <div class="col">
+          <label class="form-label">Contact Phone</label>
+          <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phoneNumber"
+            placeholder="###-###-####">
+        </div>
+        <div class="col">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" id="email"
+            placeholder="xxxxx@example.com">
+        </div>
+      </div>
+      <div class="row py-3 ms-1">
+        <table class="table menu table-bordered table-responsive">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" colspan="4">Cost Per cm<sup>3</sup></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Square/Rectangular Cubes:</td>
+                <td>$.001 cents per cm<sup>3</sup></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td col-3>Flat bottomed cylinders:</td>
+                <td col-1>$.0012 cents per cm<sup>3</sup></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>½ Spherical:</td>
+                <td>$.0015 cents per cm<sup>3</sup></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Truncated cone:</td>
+                <td>$.002 cents per cm<sup>3</sup></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="row pt-3">
+        <div class="col">
+            <label for="planterType" class="form-label">Planter Type</label>
+            <select id="planterType" class="form-select" required>
+                <option value = "">Choose...</option>
+                <option value = "rectangular">Retangular Cube</option>
+                <option value = "flat-bottom">Flat Bottom Cylinder</option>
+                <option value = "half-spherical">Half Spherical </option>
+                <option value = "truncated-cone">Truncated cone</option>
+            </select>
+        </div>
+      </div>
+      <div class="row pt-3" id = "planterInputs"></div>
+      <div class="row g-4 py-4">
+        <div class="col-auto mt-5">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+      <div class="row g-4 py-4">
+        <div class="col">
+            <div id="receipt"></div>
+        </div>
+      </div>
+    </div>
+    
+  
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+    <script src="calculation.js"></script>
+</body>
+
+</html>
